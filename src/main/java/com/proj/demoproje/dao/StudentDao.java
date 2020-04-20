@@ -27,6 +27,7 @@ public class StudentDao {
 
     public Student getData(Integer rollNum) {
         Optional<StudentEntity> mainEntity = mainRepository.findById(rollNum);
+        System.out.println(rollNum);
         if (mainEntity.isEmpty())
             return null;
         StudentEntity obj = mainEntity.get();
